@@ -1,81 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
   <head>
     <link rel="stylesheet" href="../../styles.css" />
+    <title>Przepisy na twarożek | Blog Insulinooporność</title>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Przepis na twarożek, idealny dodatek do śniadania, wysoka zawartośc białka pozwoli nasycić na kilka godzin"
+    />
   </head>
-  <body bgcolor="white">
+  <body>
     <div class="header">
-      <p
-        style="color: black; font-weight: bold"
-        onclick="window.location.href='../../index.html'"
-      >
+      <a style="color: black; font-weight: bold" href="../../index.html">
         BLOG INSULINOOPORNOŚĆ
-      </p>
+      </a>
       <p style="color: white; font-family: 'Brush Script MT', cursive">
         by Dominika
       </p>
     </div>
     <div class="homepage-content">
       <div id="menu-button">MENU</div>
-      <div class="navigation" align="left">
+      <nav class="navigation">
         <p style="width: 100%; text-align: right; cursor: pointer">X</p>
-        <p onclick="window.location.href='../../index.html'; " id="nav_link">
-          Strona główna
-        </p>
-        <p onclick="window.location.href='../../o-mnie.html'; " id="nav_link">
-          O mnie
-        </p>
-        <p
-          onclick="window.location.href='../../diagnostyka-insulinoopornosci.html';"
-          id="nav_link"
-        >
-          Diagnostyka
-        </p>
-        <p
-          onclick="window.location.href='../../leczenie-insulinoopornosci.html'; "
-          id="nav_link"
-        >
-          Leczenie
-        </p>
-        <p
-          onclick="window.location.href='../../odchudzanie-z-insulinoopornoscia.html'; "
-          id="nav_link"
-        >
-          Odchudzanie
-        </p>
-        <p
-          onclick="window.location.href='../../przepisy-dla-insulinoopornych.html'; "
-          id="nav_link"
-        >
-          Przepisy
-        </p>
-      </div>
+        <a href="../../index.html"> Strona główna </a>
+        <a href="../../o-mnie.html"> O mnie </a>
+        <a href="../../diagnostyka-insulinoopornosci.html"> Diagnostyka </a>
+        <a href="../../leczenie-insulinoopornosci.html"> Leczenie </a>
+        <a href="../../odchudzanie-z-insulinoopornoscia.html"> Odchudzanie </a>
+        <a href="../../przepisy-dla-insulinoopornych.html"> Przepisy </a>
+      </nav>
       <div class="content-background" style="padding-top: 20px">
         <div class="banner-without-gradient">
-          <img src="../../src/twarozek.jpg" />
+          <img src="../../src/twarozek.jpg" alt="twarożek" />
         </div>
-        <center>Twarożek</center>
+        <h1 class="center">Twarożek</h1>
         <div class="text-content">
           <div class="text-content">
-            <p class="h1">Składniki</p>
+            <h1 class="h1">Składniki</h1>
             <ul>
-              <li>100–150 g twarogu (półtłustego lub chudego)
-</li>
-              <li>1–2 łyżki jogurtu naturalnego (lub śmietany, jeśli wolisz bardziej kremowy)</li>
+              <li>100–150 g twarogu (półtłustego lub chudego)</li>
+              <li>
+                1–2 łyżki jogurtu naturalnego (lub śmietany, jeśli wolisz
+                bardziej kremowy)
+              </li>
               <li>Sól do smaku</li>
               <li>(Opcjonalnie) szczypiorek, rzodkiewka, pieprz, zioła</li>
             </ul>
           </div>
           <div class="text-content">
-            <p class="h1">Przygotowanie</p>
+            <h1 class="h1">Przygotowanie</h1>
             <ul>
               <li>
-                Wymieszaj wszystkie składniki w miseczce, aż uzyskasz pożądaną konsystencję. Gotowe!
+                Wymieszaj wszystkie składniki w miseczce, aż uzyskasz pożądaną
+                konsystencję. Gotowe!
               </li>
             </ul>
           </div>
           <div class="text-content">
-            <p class="h1">Z czym podać twarożek</p>
+            <h1 class="h1">Z czym podać twarożek</h1>
             <ol>
               <li>na kanapce z pomidorem lub ogórkiem</li>
               <li>jako farsz do naleśników</li>
@@ -83,42 +65,46 @@
               <li>jako dip do warzyw (np. marchewki, papryki)</li>
               <li>z pieczonymi batatami lub burakami</li>
             </ol>
+          </div>
         </div>
-      </div>
-      <div class="text-content">
-        <p class="h1">Zobacz też:</p>
-        <div class="recipies">
-          <div
-            onclick="window.location.href='../../przepisy-dla-insulinoopornych/fritata/'"
-            class="recipe-link"
-          >
-            <div class="recipe-block">
-              <img src="../../src/fritata.jpg" />
-              <p>Fritata</p>
-            </div>
-          </div>
-          <div
-            onclick="window.location.href='../../przepisy-dla-insulinoopornych/prazona-ciecierzyca/'"
-            class="recipe-link"
-          >
-            <div class="recipe-block">
-              <img src="../../src/chickpeas.jpg" />
-              <p>Prażona ciecierzyca</p>
-            </div>
-          </div>
-          <div
-            onclick="window.location.href='../../przepisy-dla-insulinoopornych/jajka-po-turecku/'"
-            class="recipe-link"
-          >
-            <div class="recipe-block">
-              <img src="../../src/jajka-po-turecku.jpg" />
-              <p>Jajka po turecku</p>
-            </div>
+        <div class="text-content">
+          <h1 class="h1">Zobacz też:</h1>
+          <div class="recipies">
+            <a
+              href="../../przepisy-dla-insulinoopornych/fritata/"
+              class="recipe-link"
+            >
+              <div class="recipe-block">
+                <img src="../../src/fritata.jpg" alt="fritata" />
+                <p>Fritata</p>
+              </div>
+            </a>
+            <a
+              href="../../przepisy-dla-insulinoopornych/prazona-ciecierzyca/"
+              class="recipe-link"
+            >
+              <div class="recipe-block">
+                <img src="../../src/chickpeas.jpg" alt="ciecierzyca" />
+                <p>Prażona ciecierzyca</p>
+              </div>
+            </a>
+            <a
+              href="../../przepisy-dla-insulinoopornych/jajka-po-turecku/"
+              class="recipe-link"
+            >
+              <div class="recipe-block">
+                <img
+                  src="../../src/jajka-po-turecku.jpg"
+                  alt="jajka po turecku"
+                />
+                <p>Jajka po turecku</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer">Autor: Dominika Prokocka</div>
+    <footer class="footer">Autor: Dominika Prokocka</footer>
     <script>
       const menuButton = document.querySelector("#menu-button");
       const navigation = document.querySelector(".navigation");

@@ -1,198 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
   <head>
     <link rel="stylesheet" href="styles.css" />
+    <title>
+      Przepisy z niskim indeksem glikemicznym | Blog Insulinooporność
+    </title>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Nie masz pomysłów na posiłki o niskim IG? Pozwól że pokażę ci moje ulubione potrawy, po których będziesz się czuć dobrze"
+    />
   </head>
   <body>
-    <div class="header" bgcolor="red">
-      <p
-        style="color: black; font-weight: bold"
-        onclick="window.location.href='index.html'"
-      >
+    <div class="header">
+      <a style="color: black; font-weight: bold" href="index.html">
         BLOG INSULINOOPORNOŚĆ
-      </p>
+      </a>
       <p style="color: white; font-family: 'Brush Script MT', cursive">
         by Dominika
       </p>
     </div>
     <div class="homepage-content">
       <div id="menu-button">MENU</div>
-      <div class="navigation" align="left">
+      <nav class="navigation">
         <p style="width: 100%; text-align: right; cursor: pointer">X</p>
-        <p onclick="window.location.href='index.html'; " id="nav_link">
-          Strona główna
-        </p>
-        <p onclick="window.location.href='o-mnie.html'; " id="nav_link">
-          O mnie
-        </p>
-        <p
-          onclick="window.location.href='diagnostyka-insulinoopornosci.html';"
-          id="nav_link"
-        >
-          Diagnostyka
-        </p>
-        <p
-          onclick="window.location.href='leczenie-insulinoopornosci.html'; "
-          id="nav_link"
-        >
-          Leczenie
-        </p>
-        <p
-          onclick="window.location.href='odchudzanie-z-insulinoopornoscia.html'; "
-          id="nav_link"
-        >
-          Odchudzanie
-        </p>
-        <p
-          onclick="window.location.href='przepisy-dla-insulinoopornych-dla-insulinoopornych.html'; "
-          id="nav_link"
-        >
-          Przepisy
-        </p>
-      </div>
+        <a href="index.html"> Strona główna </a>
+        <a href="o-mnie.html"> O mnie </a>
+        <a href="diagnostyka-insulinoopornosci.html"> Diagnostyka </a>
+        <a href="leczenie-insulinoopornosci.html"> Leczenie </a>
+        <a href="odchudzanie-z-insulinoopornoscia.html"> Odchudzanie </a>
+        <a href="przepisy-dla-insulinoopornych.html"> Przepisy </a>
+      </nav>
       <div class="content-background" style="padding-top: 20px">
-        <p class="h1">przepisy dla insulinoopornych</p>
+        <h1 class="h1">przepisy dla insulinoopornych</h1>
         <div class="recipies">
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/pancakes/'"
-            class="recipe-link"
-          >
+          <a href="przepisy-dla-insulinoopornych/pancakes/" class="recipe-link">
             <div class="recipe-block">
-              <img src="src/pancakes.jpg" />
+              <img src="src/pancakes.jpg" alt="naleśniki" />
               <p>Naleśniki pełnoziarniste</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/chia/'"
-            class="recipe-link"
-          >
+          </a>
+          <a href="przepisy-dla-insulinoopornych/chia/" class="recipe-link">
             <div class="recipe-block">
-              <img src="src/pudding1.jpg" />
+              <img src="src/pudding1.jpg" alt="pudding chia" />
               <p>Pudding chia</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/quiche/'"
-            class="recipe-link"
-          >
+          </a>
+          <a href="przepisy-dla-insulinoopornych/quiche/" class="recipe-link">
             <div class="recipe-block">
-              <img src="src/quiche.jpg" />
+              <img src="src/quiche.jpg" alt="quiche" />
               <p>Quiche</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/hummus/'"
-            class="recipe-link"
-          >
+          </a>
+          <a href="przepisy-dla-insulinoopornych/hummus/" class="recipe-link">
             <div class="recipe-block">
-              <img src="src/hummus.jpg" />
+              <img src="src/hummus.jpg" alt="hummus" />
               <p>Hummus</p>
             </div>
-          </div>
-          <!-- Od tąd zaczynają się puste linki, część potem uzupełnię a część usunę cel: 30 -->
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/placki-z-cukinii/'"
+          </a>
+          <a
+            href="przepisy-dla-insulinoopornych/placki-z-cukinii/"
             class="recipe-link"
           >
             <div class="recipe-block">
-              <img src="src/zuchini-pancakes.jpg" />
+              <img src="src/zuchini-pancakes.jpg" alt="placki z cukinii" />
               <p>Placki z cukinii</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/omlet-jajeczny/'"
+          </a>
+          <a
+            href="przepisy-dla-insulinoopornych/omlet-jajeczny/"
             class="recipe-link"
           >
             <div class="recipe-block">
-              <img src="src/omelette.jpg" />
+              <img src="src/omelette.jpg" alt="omlet jajeczny" />
               <p>Omlet jajeczny</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/musli/'"
-            class="recipe-link"
-          >
+          </a>
+          <a href="przepisy-dla-insulinoopornych/musli/" class="recipe-link">
             <div class="recipe-block">
-              <img src="src/musli.jpg" loading="lazy" />
+              <img src="src/musli.jpg" loading="lazy" alt="musli" />
               <p>Musli</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/fritata/'"
-            class="recipe-link"
-          >
+          </a>
+          <a href="przepisy-dla-insulinoopornych/fritata/" class="recipe-link">
             <div class="recipe-block">
-              <img src="src/fritata.jpg" loading="lazy" />
+              <img src="src/fritata.jpg" loading="lazy" alt="fritata" />
               <p>Fritata</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/szakszuka/'"
+          </a>
+          <a
+            href="przepisy-dla-insulinoopornych/szakszuka/"
             class="recipe-link"
           >
             <div class="recipe-block">
-              <img src="src/szakszuka.jpg" loading="lazy" />
+              <img src="src/szakszuka.jpg" loading="lazy" alt="szakszuka" />
               <p>Szakszuka</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/jajka-po-turecku/'"
+          </a>
+          <a
+            href="przepisy-dla-insulinoopornych/jajka-po-turecku/"
             class="recipe-link"
           >
             <div class="recipe-block">
-              <img src="src/jajka-po-turecku.jpg" loading="lazy" />
+              <img
+                src="src/jajka-po-turecku.jpg"
+                loading="lazy"
+                alt="jajka po turecku"
+              />
               <p>Jajka po turecku</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/twarozek/'"
-            class="recipe-link"
-          >
+          </a>
+          <a href="przepisy-dla-insulinoopornych/twarozek/" class="recipe-link">
             <div class="recipe-block">
-              <img src="src/twarozek.jpg" loading="lazy" />
+              <img src="src/twarozek.jpg" loading="lazy" alt="twarożek" />
               <p>Twarożek</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/gofry-pelnoziarniste/'"
+          </a>
+          <a
+            href="przepisy-dla-insulinoopornych/gofry-pelnoziarniste/"
             class="recipe-link"
           >
             <div class="recipe-block">
-              <img src="src/waffles.jpg" loading="lazy" />
+              <img src="src/waffles.jpg" loading="lazy" alt="gofry" />
               <p>Gofry pełnoziarniste</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/awokado-tosty/'"
+          </a>
+          <a
+            href="przepisy-dla-insulinoopornych/awokado-tosty/"
             class="recipe-link"
           >
             <div class="recipe-block">
-              <img src="src/avocado-toast.jpg" loading="lazy" />
+              <img
+                src="src/avocado-toast.jpg"
+                loading="lazy"
+                alt="tosty z awokado"
+              />
               <p>Tosty z awokado i jajkiem w koszulce</p>
             </div>
-          </div>
-          <div
-            onclick="window.location.href='przepisy-dla-insulinoopornych/prazona-ciecierzyca/'"
+          </a>
+          <a
+            href="przepisy-dla-insulinoopornych/prazona-ciecierzyca/"
             class="recipe-link"
           >
             <div class="recipe-block">
-              <img src="src/chickpeas.jpg" loading="lazy" />
+              <img
+                src="src/chickpeas.jpg"
+                loading="lazy"
+                alt="prażona ciecierzyca"
+              />
               <p>Prażona ciecierzyca</p>
             </div>
-          </div>
-          <div
+          </a>
+          <a
             onclick="window.location.href='przepisy-dla-insulinoopornych/steki-z-kalafiora/'"
             class="recipe-link"
           >
             <div class="recipe-block">
-              <img src="src/kalafior.jpg" loading="lazy" />
+              <img
+                src="src/kalafior.jpg"
+                loading="lazy"
+                alt="steki z kalafiora"
+              />
               <p>Steki z kalafiora</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
-    <div class="footer">Autor: Dominika Prokocka</div>
+    <footer class="footer">Autor: Dominika Prokocka</footer>
     <script>
       const menuButton = document.querySelector("#menu-button");
       const navigation = document.querySelector(".navigation");
