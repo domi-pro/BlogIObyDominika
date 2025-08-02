@@ -4,6 +4,7 @@
     <title>Blog Insulinooporność</title>
     <link rel="stylesheet" href="styles.css" />
     <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Dowiedz się więcej na temat insulinooporności. Poznaj po czym poznać insulinnoporność i jak ją leczyć oraz znajdź odpowiedź na nurtujące cię pytania i okiełznaj IO."
@@ -19,9 +20,15 @@
       </p>
     </header>
     <div class="homepage-content">
-      <div id="menu-button">MENU</div>
-      <nav class="navigation">
-        <p style="width: 100%; text-align: right; cursor: pointer">X</p>
+      <button
+        id="menu-button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        MENU
+      </button>
+      <nav class="navigation" id="main-navigation" hidden>
+        <button aria-label="Zamknij menu">X</button>
         <a href="index.html"> Strona główna </a>
         <a href="o-mnie.html"> O mnie </a>
         <a href="diagnostyka-insulinoopornosci.html"> Diagnostyka </a>
@@ -29,9 +36,17 @@
         <a href="odchudzanie-z-insulinoopornoscia.html"> Odchudzanie </a>
         <a href="przepisy-dla-insulinoopornych.html"> Przepisy </a>
       </nav>
-      <div class="content-background" style="padding-top: 20px">
+      <div class="content-background">
         <div class="banner">
-          <img src="src/veggies-unsplash.jpg" alt="Warzywa" />
+          <img
+            src="src/veggies-unsplash-1800.jpg"
+            srcset="
+              src/veggies-unsplash-900.jpg   900w,
+              src/veggies-unsplash-1800.jpg 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="Warzywa"
+          />
         </div>
         <div class="text-content">
           <h2>Witaj na blogu o Insulinooporności 🌿</h2>
@@ -92,7 +107,16 @@
           </p>
         </div>
         <div class="banner">
-          <img src="src/runner-sunset-main.jpg" loading="lazy" alt="biegacz" />
+          <img
+            src="src/runner-sunset-main-1800.jpg"
+            srcset="
+              src/runner-sunset-main-900.jpg   900w,
+              src/runner-sunset-main-1800.jpg 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="Biegacz"
+            loading="lazy"
+          />
         </div>
         <h1 class="h1">Fundamenty</h1>
         <div class="notes">
@@ -280,16 +304,20 @@
     <script>
       const menuButton = document.querySelector("#menu-button");
       const navigation = document.querySelector(".navigation");
-      const closeButton = document.querySelector(".navigation p:first-child");
+      const closeButton = document.querySelector(".navigation button");
 
       menuButton.addEventListener("click", () => {
         navigation.classList.add("active");
         menuButton.classList.add("hidden");
+        menuButton.setAttribute("aria-expanded", "true");
+        navigation.removeAttribute("hidden");
       });
 
       closeButton.addEventListener("click", () => {
         navigation.classList.remove("active");
         menuButton.classList.remove("hidden");
+        menuButton.setAttribute("aria-expanded", "false");
+        navigation.setAttribute("hidden", "");
       });
 
       document.addEventListener("DOMContentLoaded", () => {
@@ -300,12 +328,7 @@
             const parent = button.parentElement;
             const content = parent.nextElementSibling;
 
-            // Przełączanie widoczności zawartości
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
-            }
+            content.classList.toggle("active");
           });
         });
       });

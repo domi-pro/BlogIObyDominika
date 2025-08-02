@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Diagnostyka insulinooporności | Blog Insulinooporność</title>
     <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Kiedy podejrzewasz u siebie insulinooporność, warto to zweryfikować. Dowiedz się jakie badania wykonać, jak one wyglądają i jak interpretować wyniki"
@@ -19,9 +20,15 @@
       </p>
     </header>
     <div class="homepage-content">
-      <div id="menu-button">MENU</div>
-      <nav class="navigation">
-        <p style="width: 100%; text-align: right; cursor: pointer">X</p>
+      <button
+        id="menu-button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        MENU
+      </button>
+      <nav class="navigation" id="main-navigation" hidden>
+        <button aria-label="Zamknij menu">X</button>
         <a href="index.html"> Strona główna </a>
         <a href="o-mnie.html"> O mnie </a>
         <a href="diagnostyka-insulinoopornosci.html"> Diagnostyka </a>
@@ -29,9 +36,17 @@
         <a href="odchudzanie-z-insulinoopornoscia.html"> Odchudzanie </a>
         <a href="przepisy-dla-insulinoopornych.html"> Przepisy </a>
       </nav>
-      <div class="content-background" style="padding-top: 20px">
+      <div class="content-background">
         <div class="banner">
-          <img src="src/obesity-diagnose.jpg" alt="otyłość" />
+          <img
+            src="src/obesity-diagnose-1800.jpg"
+            srcset="
+              src/obesity-diagnose-900.jpg   900w,
+              src/obesity-diagnose-1800.jpg 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="Otyłość"
+          />
         </div>
         <div class="text-content">
           <h1 class="h1">Diagnostyka</h1>
@@ -92,8 +107,13 @@
             szansa na skuteczne działanie i poprawę samopoczucia.
           </p>
         </div>
-        <div class="banner-without-gradient" style="width: 80%; margin: auto">
-          <img src="src/glukometr.jpg" loading="lazy" alt="glukometr" />
+        <div class="banner">
+          <img
+            src="src/glukometr-1800.jpg"
+            srcset="src/glukometr-900.jpg 900w, src/glukometr-1800.jpg 1800w"
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="glukometr"
+          />
         </div>
         <div class="text-content">
           <h2 class="h2">Jakie badania wykonać?</h2>
@@ -156,46 +176,32 @@
             z utrzymaniem prawidłowego poziomu glukozy we krwi.
           </p>
         </div>
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 80%;
-            margin: auto;
-          "
-        >
+        <div class="wykresy">
           <img
-            src="src/glukoza_ogtt.png"
-            style="width: 70%; margin: 10px auto"
+            src="src/glukoza_ogtt-1800.png"
             loading="lazy"
+            srcset="
+              src/glukoza_ogtt-900.png   900w,
+              src/glukoza_ogtt-1800.png 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
             alt="wykres krzywej glukozowej"
           />
-          <p
-            style="
-              font-size: 12px;
-              font-style: italic;
-              color: grey;
-              margin: auto;
-            "
-          >
+          <p style="font-size: 12px; font-style: italic; margin: auto">
             Krzywa glukozowa (OGTT) trzypunktowa
           </p>
           <br />
           <img
-            src="src/insulina_ogtt.png"
-            style="width: 70%; margin: 10px auto"
+            src="src/insulina_ogtt-1800.png"
             loading="lazy"
+            srcset="
+              src/insulina_ogtt-900.png   900w,
+              src/insulina_ogtt-1800.png 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
             alt="wykres krzywej insulinowej"
           />
-          <p
-            style="
-              font-size: 12px;
-              font-style: italic;
-              color: grey;
-              margin: auto;
-            "
-          >
+          <p style="font-size: 12px; font-style: italic; margin: auto">
             Krzywa insulinowa (OGTT) trzypunktowa
           </p>
         </div>
@@ -260,19 +266,8 @@
             bardziej zaawansowany stan.
           </p>
         </div>
-        <div
-          id="kalkulatorHoma"
-          class="text-content"
-          style="
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-          "
-        >
-          <h2 class="h2" style="margin: 20px auto">Kalkulator HOMA-IR</h2>
+        <div id="kalkulatorHoma" class="text-content">
+          <h2 class="h2">Kalkulator HOMA-IR</h2>
           <label for="glukoza">Glukoza [mg/dl]</label
           ><input type="text" name="glukoza" id="glukoza" />
           <label for="insulina">Insulina [mU/ml]</label
@@ -281,8 +276,16 @@
           <p id="wynik"></p>
           <p id="komunikat" style="color: red"></p>
         </div>
-        <div class="banner-without-gradient" style="width: 80%; margin: auto">
-          <img src="src/diabetologist.jpg" loading="lazy" alt="diabetolog" />
+        <div class="banner">
+          <img
+            src="src/diabetologist-1800.jpg"
+            srcset="
+              src/diabetologist-900.jpg   900w,
+              src/diabetologist-1800.jpg 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="diabetolog"
+          />
         </div>
         <div class="text-content">
           <h2 class="h2">Co zrobić po wykonaniu badań?</h2>
@@ -308,37 +311,23 @@
     <script>
       const menuButton = document.querySelector("#menu-button");
       const navigation = document.querySelector(".navigation");
-      const closeButton = document.querySelector(".navigation p:first-child");
+      const closeButton = document.querySelector(".navigation button");
 
       menuButton.addEventListener("click", () => {
         navigation.classList.add("active");
         menuButton.classList.add("hidden");
+        menuButton.setAttribute("aria-expanded", "true");
+        navigation.removeAttribute("hidden");
       });
 
       closeButton.addEventListener("click", () => {
         navigation.classList.remove("active");
         menuButton.classList.remove("hidden");
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const faqButtons = document.querySelectorAll(".faq-button");
-
-        faqButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            const content = button.nextElementSibling;
-
-            // Przełączanie widoczności zawartości
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
-            }
-          });
-        });
+        menuButton.setAttribute("aria-expanded", "false");
+        navigation.setAttribute("hidden", "");
       });
 
       function obliczHoma() {
-        console.log("działa");
         const glukoza = document.getElementsByName("glukoza")[0].value;
         const insulina = document.getElementsByName("insulina")[0].value;
         const komunikat = document.getElementById("komunikat");
