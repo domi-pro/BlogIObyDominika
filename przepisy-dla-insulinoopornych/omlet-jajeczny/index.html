@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="../../styles.css" />
     <title>Przepisy na omlet | Blog Insulinooporność</title>
     <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Śniadanie to najważniejszy posiłek w ciągu dnia, rozpocznij go od omleta jajecznego z ulubionymi dodatkami"
@@ -19,9 +20,15 @@
       </p>
     </div>
     <div class="homepage-content">
-      <div id="menu-button">MENU</div>
-      <nav class="navigation">
-        <p style="width: 100%; text-align: right; cursor: pointer">X</p>
+      <button
+        id="menu-button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        MENU
+      </button>
+      <nav class="navigation" id="main-navigation" hidden>
+        <button aria-label="Zamknij menu">X</button>
         <a href="../../index.html"> Strona główna </a>
         <a href="../../o-mnie.html"> O mnie </a>
         <a href="../../diagnostyka-insulinoopornosci.html"> Diagnostyka </a>
@@ -29,9 +36,17 @@
         <a href="../../odchudzanie-z-insulinoopornoscia.html"> Odchudzanie </a>
         <a href="../../przepisy-dla-insulinoopornych.html"> Przepisy </a>
       </nav>
-      <div class="content-background" style="padding-top: 20px">
-        <div class="banner-without-gradient">
-          <img src="../../src/omelette.jpg" alt="omlet" />
+      <div class="content-background">
+        <div class="banner">
+          <img
+            src="../../src/omelette-1800.jpg"
+            srcset="
+              ../../src/omelette-900.jpg   900w,
+              ../../src/omelette-1800.jpg 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="omlet"
+          />
         </div>
         <h1 class="center">Omlet jajeczny</h1>
         <div class="text-content">
@@ -128,33 +143,20 @@
     <script>
       const menuButton = document.querySelector("#menu-button");
       const navigation = document.querySelector(".navigation");
-      const closeButton = document.querySelector(".navigation p:first-child");
+      const closeButton = document.querySelector(".navigation button");
 
       menuButton.addEventListener("click", () => {
         navigation.classList.add("active");
         menuButton.classList.add("hidden");
+        menuButton.setAttribute("aria-expanded", "true");
+        navigation.removeAttribute("hidden");
       });
 
       closeButton.addEventListener("click", () => {
         navigation.classList.remove("active");
         menuButton.classList.remove("hidden");
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const faqButtons = document.querySelectorAll(".faq-button");
-
-        faqButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            const content = button.nextElementSibling;
-
-            // Przełączanie widoczności zawartości
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
-            }
-          });
-        });
+        menuButton.setAttribute("aria-expanded", "false");
+        navigation.setAttribute("hidden", "");
       });
     </script>
   </body>

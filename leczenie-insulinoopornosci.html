@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Leczenie insulinooporności | Blog Insulinooporność</title>
     <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Kiedy już zdiagnozują u Ciebie insulinnoporność może być ciężko ogarnąć co teraz z nią robić, pozwól że opowiem Ci co robić i jak poradzić sobie z IO"
@@ -30,8 +31,13 @@
         <a href="przepisy-dla-insulinoopornych.html"> Przepisy </a>
       </nav>
       <div class="content-background" style="padding-top: 20px">
-        <div class="banner-without-gradient" style="width: 80%; margin: auto">
-          <img src="src/good-plate.jpg" alt="zbilansowany posiłek" />
+        <div class="banner">
+          <img
+            src="src/good-plate-1800.jpg"
+            srcset="src/good-plate-900.jpg 900w, src/good-plate-1800.jpg 1800w"
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="Zbilansowany posiłek"
+          />
         </div>
         <div class="text-content">
           <h2 class="h2">
@@ -120,28 +126,17 @@
             </li>
           </ul>
         </div>
-        <div
-          style="
-            width: 80%;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-          "
-        >
+        <div class="wykresy">
           <img
-            src="src/zdrowy-talerzyk.png"
-            style="width: 70%; margin: 10px auto"
-            loading="lazy"
+            src="src/zdrowy-talerzyk-1800.png"
+            srcset="
+              src/zdrowy-talerzyk-900.png   900w,
+              src/zdrowy-talerzyk-1800.png 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
             alt="diagram z instrukcją jak komponować posiłki w IO"
           />
-          <p
-            style="
-              font-size: 12px;
-              font-style: italic;
-              color: grey;
-              margin: auto;
-            "
-          >
+          <p style="font-size: 12px; font-style: italic; margin: auto">
             Zasady komponowania zdrowego talerza
           </p>
         </div>
@@ -171,8 +166,13 @@
             sportowcach zmagających się z insulinoopornością.
           </p>
         </div>
-        <div class="banner-without-gradient" style="width: 80%; margin: auto">
-          <img src="src/gym.jpg" loading="lazy" alt="siłownia" />
+        <div class="banner">
+          <img
+            src="src/gym-1800.jpg"
+            srcset="src/gym-900.jpg 900w, src/gym-1800.jpg 1800w"
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="siłownia"
+          />
         </div>
         <div class="text-content" id="farmakoterapia">
           <h2 class="h2">

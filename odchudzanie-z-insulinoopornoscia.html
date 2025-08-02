@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Odchudzanie z insulinoopornością | Blog Insulinooporność</title>
     <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Często osobom z insulinoopornością towarzyszy nadwaga lub otyłość, a zgubienie nadmiaru tkanki tłuszczowej może znacząco poprawić jakość życia i pozytywnie wpłynąć na pracę trzustki i naszą insulinowrażliwość"
@@ -19,9 +20,15 @@
       </p>
     </header>
     <div class="homepage-content">
-      <div id="menu-button">MENU</div>
-      <nav class="navigation">
-        <p style="width: 100%; text-align: right; cursor: pointer">X</p>
+      <button
+        id="menu-button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        MENU
+      </button>
+      <nav class="navigation" id="main-navigation" hidden>
+        <button aria-label="Zamknij menu">X</button>
         <a href="index.html"> Strona główna </a>
         <a href="o-mnie.html"> O mnie </a>
         <a href="diagnostyka-insulinoopornosci.html"> Diagnostyka </a>
@@ -29,9 +36,14 @@
         <a href="odchudzanie-z-insulinoopornoscia.html"> Odchudzanie </a>
         <a href="przepisy-dla-insulinoopornych.html"> Przepisy </a>
       </nav>
-      <div class="content-background" style="padding-top: 20px">
-        <div class="banner-without-gradient" style="width: 80%; margin: auto">
-          <img src="src/weight-lose.jpg" alt="napis odchudzanie" />
+      <div class="content-background">
+        <div class="banner">
+          <img
+            src="src/weight-lose-1800.jpg"
+            srcset="src/weight-lose-900.jpg 900w, src/weight-lose.jpg 1800w"
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="napis weight loss"
+          />
         </div>
         <div class="text-content">
           <h1 class="h1">Odchudzanie</h1>
@@ -82,8 +94,17 @@
             jo-jo.
           </p>
         </div>
-        <div class="banner-without-gradient" style="width: 80%; margin: auto">
-          <img src="src/loose-weight.jpg" loading="lazy" alt="waga i miarka" />
+        <div class="banner">
+          <img
+            src="src/loose-weight-1800.jpg"
+            srcset="
+              src/loose-weight-900.jpg   900w,
+              src/loose-weight-1800.jpg 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
+            alt="waga i miarka"
+            loading="lazy"
+          />
         </div>
         <div class="text-content">
           <h2 class="h2">Kalorie kaloriom nierówne</h2>
@@ -97,7 +118,7 @@
           </p>
         </div>
         <div class="text-content">
-          <p class="h2">Ruch ma znaczenie (ale nie możesz go nienawidzić)</p>
+          <h2>Ruch ma znaczenie (ale nie możesz go nienawidzić)</h2>
           <p>
             Kolejnym filarem skutecznego odchudzania jest aktywność fizyczna, to
             ona podnosi nasze CPM oraz w efekcie czego jedząc nadal tą samą
@@ -142,11 +163,16 @@
             zapas na później.
           </p>
         </div>
-        <div class="banner-without-gradient" style="width: 80%; margin: auto">
+        <div class="banner">
           <img
-            src="src/apple-weight-lose.jpg"
-            loading="lazy"
+            src="src/apple-weight-lose-1800.jpg"
+            srcset="
+              src/apple-weight-lose-900.jpg   900w,
+              src/apple-weight-lose-1800.jpg 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
             alt="jabłko i miarka"
+            loading="lazy"
           />
         </div>
         <div class="text-content">
@@ -203,11 +229,16 @@
             hormonalnych.
           </p>
         </div>
-        <div class="banner-without-gradient" style="width: 80%; margin: auto">
+        <div class="banner">
           <img
-            src="src/calories-counter.jpg"
-            loading="lazy"
+            src="src/calories-counter-1800.jpg"
+            srcset="
+              src/calories-counter-900.jpg   900w,
+              src/calories-counter-1800.jpg 1800w
+            "
+            sizes="(max-width: 900px) 100vw, 1800px"
             alt="liczenie kalorii"
+            loading="lazy"
           />
         </div>
         <div class="text-content">
@@ -254,33 +285,20 @@
     <script>
       const menuButton = document.querySelector("#menu-button");
       const navigation = document.querySelector(".navigation");
-      const closeButton = document.querySelector(".navigation p:first-child");
+      const closeButton = document.querySelector(".navigation button");
 
       menuButton.addEventListener("click", () => {
         navigation.classList.add("active");
         menuButton.classList.add("hidden");
+        menuButton.setAttribute("aria-expanded", "true");
+        navigation.removeAttribute("hidden");
       });
 
       closeButton.addEventListener("click", () => {
         navigation.classList.remove("active");
         menuButton.classList.remove("hidden");
-      });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const faqButtons = document.querySelectorAll(".faq-button");
-
-        faqButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            const content = button.nextElementSibling;
-
-            // Przełączanie widoczności zawartości
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
-            }
-          });
-        });
+        menuButton.setAttribute("aria-expanded", "false");
+        navigation.setAttribute("hidden", "");
       });
     </script>
   </body>
